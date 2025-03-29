@@ -1,0 +1,12 @@
+Okay, here's a breakdown of the provided content, formatted as requested, and incorporating the key information and terminology.
+
+**Questions:**
+
+1.  What is a critical section?
+2.  What are the difficulties of concurrency?
+3.  What is a bounded-buffer without semaphore?
+4.  What is the purpose of a mutex?
+5.  What are the advantages and disadvantages of the hardware approach to mutual exclusion?
+6.  What are the key features of the OS and PL approach to mutual exclusion?
+
+**

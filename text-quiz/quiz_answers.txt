@@ -1,0 +1,55 @@
+Answers:**
+
+1.  **What is a critical section?**
+
+    A critical section is a section of code within a process that requires access to shared resources and that must not be executed while another process is in a corresponding section of code.  It's a mechanism for ensuring exclusive access to shared resources.
+
+2.  **What are the difficulties of concurrency?**
+
+    The difficulties of concurrency include:
+
+    *   Proneness to high processing overhead and bugs.
+    *   Potential for starvation (a process might never get to access the resource).
+    *   The possibility of deadlock if processes become blocked waiting for each other.
+    *   Increased complexity in designing and debugging concurrent programs.
+
+3.  **What is a bounded-buffer without semaphore?**
+
+   It is a simple approach where one or more buffers are allocated to hold data.  Processes can place data in the buffer until it is full, or remove data from the buffer until it is empty. 
+
+4.  **What is a mutex?**
+
+    A mutex (short for "mutual exclusion") is a synchronization primitive that allows a process to request exclusive access to a shared resource.  It is often implemented using a semaphore with a value of 1. Processes acquire the mutex before entering a critical section and release it upon exiting.
+
+5.  **What are the advantages and disadvantages of the hardware approach to mutual exclusion?**
+
+    *   **Advantages:**
+        *   It is simple and therefore easy to verify.
+        *   It can be used to support multiple critical sections.
+        *   It’s a good general solution.
+    *   **Disadvantages:**
+        *   Busy-waiting consumes processor time.
+        *   Starvation is possible (some processes may never be selected).
+        *   Deadlock can occur.
+
+6.  **What are the key features of the OS and PL approach to mutual exclusion?**
+
+    The OS and PL approach involves using synchronization primitives provided by the operating system and programming language. These include:
+
+    *   **Semaphore:** Provides a synchronization mechanism based on counting.
+    *   **Mutex:** A special type of semaphore used for mutual exclusion.
+    *   **Condition Variables:** Used in conjunction with mutexes to signal and wait for specific conditions.
+    *   **Monitor:** A higher-level synchronization construct that encapsulates mutexes, condition variables, and procedures for managing shared resources.
+    *   **Event Flags:**  Used to signal events, allowing processes to wait for specific occurrences.
+    *   **Mailboxes/Messages:**  Enable inter-process communication and synchronization.
+
+
+
+**Important Notes and Summary:**
+
+*   The content focuses primarily on *mutual exclusion* – ensuring that only one process can access a shared resource at a time.
+*   The approaches are categorized into hardware (machine instructions) and software (using OS/PL primitives).
+*   The hardware approach is generally simpler but has drawbacks like busy-waiting and potential for starvation.
+*   The software approaches (using OS/PL primitives) offer more flexibility but add complexity.
+
+Would you like me to elaborate on any of these concepts, or perhaps discuss a specific synchronization problem (e.g., producer-consumer)?
